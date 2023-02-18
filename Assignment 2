@@ -1,0 +1,25 @@
+//print which are divisible by k
+#include <stdio.h>
+int main() {
+    int n, k, i = 1, evensum = 0, oddsum = 0;
+
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    printf("Enter the value of k: ");
+    scanf("%d", &k);
+
+    printf("Numbers from 1 to %d which are divisible by %d are: ", n, k);
+    while(i <= n) {
+        if(i%k == 0) {
+            printf("%d ", i);
+            if(i%2 == 0) {
+                evensum += i;
+            } else {
+                oddsum += i;
+            }
+        }
+        i++;
+    }
+    printf("\nEven sum: %d\nOdd sum: %d\n", evensum, oddsum);
+}
